@@ -24,3 +24,14 @@ Brief Overview of each services used:
 1. To access the Spotify API, you need to obtain credentials to authenticate and authorize your application. Create an account on the Spotify Developer Dashboard and register your application. You will receive client credentials which is a Client ID and Client Secret.
 2. (This is optional) Set up alarm on CloudWatch to send an email if there are any charges beyond USD 5. You can also set up Free Tier Usage Alerts.
 3. Create a bucket in S3. The bucket name must be globally unique and I selected Singapore as the AWS region. This is the folder structure in the S3 bucket I created:
+
+/discover_weekly: Main folder in bucket
+/raw_data: Raw data is stored here
+* to_process: When the data extraction function is invoked, data extracted from the API will be stored here
+* processed: When the transformation function is invoked, files in to_process folder will be copied to this folder and the file in to_process will be deleted. We are just moving data from one folder to another.
+/transformed_data: These 3 folders will contain the transformed dataset where basic cleaning and transformation have been applied.
+* /album_data
+* /artist_data
+* /song_data
+
+
