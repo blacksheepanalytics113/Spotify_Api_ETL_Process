@@ -17,3 +17,10 @@ Brief Overview of each services used:
 2. Lambda: Serverless compute service to run code with managing servers. we will use lambda to deploy the python code to perfrom data extraction and transformation
 3. EventBridge: Creates and manage events, scehdule them based on a defined pattern or crom expression
 4. CloudWatch: Monitor and collect metrics from AWS resources. itcan be used to monitor log fie and set alarms
+5. Crawler: Components of AWS Glue that automatically  scans and analyzes data sources to infer theri schema and create metadata tables
+6. Athena: Interactive query services to analyse data stored in various sources using SQL queries. You can query dta from the gleu catalog and directly from the s3 buckets
+
+# Pre-Requisites
+1. To access the Spotify API, you need to obtain credentials to authenticate and authorize your application. Create an account on the Spotify Developer Dashboard and register your application. You will receive client credentials which is a Client ID and Client Secret.
+2. (This is optional) Set up alarm on CloudWatch to send an email if there are any charges beyond USD 5. You can also set up Free Tier Usage Alerts.
+3. Create a bucket in S3. The bucket name must be globally unique and I selected Singapore as the AWS region. This is the folder structure in the S3 bucket I created:
